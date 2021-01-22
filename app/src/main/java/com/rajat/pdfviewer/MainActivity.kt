@@ -19,7 +19,7 @@ class MainActivity : AppCompatActivity() {
                     "quote.pdf",
                     "Thailand Trip",
                     "Trip",
-                    false
+                    true
                 )
 
             )
