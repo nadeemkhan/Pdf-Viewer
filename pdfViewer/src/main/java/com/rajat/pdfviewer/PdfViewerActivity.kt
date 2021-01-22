@@ -167,12 +167,14 @@ class PdfViewerActivity : AppCompatActivity() {
         setSupportActionBar(toolbar)
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
         supportActionBar?.setDisplayShowHomeEnabled(true)
+        supportActionBar?.setHomeAsUpIndicator(R.drawable.ic_action_profile)
         supportActionBar?.title = toolbarTitle
+        //supportActionBar?.title.
     }
 
     override fun onCreateOptionsMenu(menu: Menu?): Boolean {
         menuInflater.inflate(R.menu.menu, menu)
-        menuItem = menu?.findItem(R.id.download)
+        menuItem = menu?.findItem(R.id.close)
         return true
     }
 
@@ -182,10 +184,10 @@ class PdfViewerActivity : AppCompatActivity() {
     }
 
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
-        if (item.itemId == R.id.download) checkPermission(PERMISSION_CODE)
-        if (item.itemId == android.R.id.home) {
-            finish() // close this activity and return to preview activity (if there is any)
-        }
+        if (item.itemId == R.id.close) finish()
+//        if (item.itemId == android.R.id.home) {
+//            finish() // close this activity and return to preview activity (if there is any)
+//        }
         return super.onOptionsItemSelected(item)
     }
 

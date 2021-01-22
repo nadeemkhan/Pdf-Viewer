@@ -10,20 +10,25 @@
     <androidx.appcompat.widget.Toolbar
         android:id="@+id/toolbar"
         android:layout_width="match_parent"
-        android:layout_height="?actionBarSize" />
+        android:layout_height="?actionBarSize"
+        app:titleTextColor="#2883ED"
+        app:title="Hello"
+        app:titleTextAppearance="@style/TextAppearance.AppCompat.Medium"
+        android:background="@android:color/white" />
 
     <FrameLayout
         android:id="@+id/mainLayout"
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
-            <com.rajat.pdfviewer.PdfRendererView
-                android:id="@+id/pdfView"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                app:pdfView_divider="@drawable/divider"
-                app:pdfView_engine="internal"
-                app:pdfView_showDivider="false" />
+        <com.rajat.pdfviewer.PdfRendererView
+            android:id="@+id/pdfView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@android:color/white"
+            app:pdfView_divider="@drawable/divider"
+            app:pdfView_engine="internal"
+            app:pdfView_showDivider="false" />
 
         <ProgressBar
             android:id="@+id/progressBar"
